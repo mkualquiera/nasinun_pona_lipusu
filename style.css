@@ -53,7 +53,7 @@ body {
     background: linear-gradient(135deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
     min-height: 100vh;
     padding: 20px;
-    font-size: 5rem;
+    font-size: 2.5rem;
 }
 
 /* Container for desktop centering */
