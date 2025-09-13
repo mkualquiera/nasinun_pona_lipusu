@@ -1,0 +1,170 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    line-height: 1.8;
+    color: #2c3e50;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Container for desktop centering */
+.container {
+    max-width: 680px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.1),
+        0 0 0 1px rgba(255, 255, 255, 0.2);
+    padding: 40px;
+}
+
+/* Typography */
+h1 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: #1a202c;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    letter-spacing: 0.05em;
+    position: relative;
+}
+
+h1::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    margin: 1rem auto;
+    border-radius: 2px;
+}
+
+h2 {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #4a5568;
+    margin: 2.5rem 0 1.5rem;
+    text-align: center;
+    letter-spacing: 0.02em;
+    position: relative;
+}
+
+h2::before {
+    content: '◊';
+    color: #667eea;
+    font-size: 0.8em;
+    margin-right: 0.5em;
+}
+
+h2::after {
+    content: '◊';
+    color: #667eea;
+    font-size: 0.8em;
+    margin-left: 0.5em;
+}
+
+/* Paragraphs */
+p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    text-align: left;
+    text-indent: 1.5em;
+    color: #2d3748;
+    transition: color 0.3s ease;
+}
+
+p:hover {
+    color: #1a202c;
+}
+
+/* First paragraph after h2 - no indent for chapter opening */
+h2+p {
+    text-indent: 0;
+    font-weight: 500;
+    color: #4a5568;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    }
+
+    .container {
+        padding: 25px;
+        border-radius: 12px;
+        margin: 0;
+        max-width: none;
+    }
+
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+        margin: 2rem 0 1.25rem;
+    }
+
+    p {
+        font-size: 1.05rem;
+        line-height: 1.7;
+        margin-bottom: 1.25rem;
+    }
+}
+
+/* Very small screens */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 20px;
+        border-radius: 8px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-size: 1rem;
+        text-indent: 1em;
+    }
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Selection styling */
+::selection {
+    background: rgba(102, 126, 234, 0.2);
+    color: #1a202c;
+}
+
+/* Focus styles for accessibility */
+h1:focus,
+h2:focus,
+p:focus {
+    outline: 2px solid #667eea;
+    outline-offset: 4px;
+    border-radius: 4px;
+}
