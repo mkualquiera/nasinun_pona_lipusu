@@ -53,7 +53,7 @@ jobs:
       - name: Build HTML files
         run: |
           cd content
-          content=$(../skp-repo/sulikamapa/target/release/skp -i test.txt) && sed "s|{{content}}|$content|g" template.html > index.html
+          content=$(../skp-repo/target/release/skp -i test.txt) && sed "s|{{content}}|$content|g" template.html > index.html
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
