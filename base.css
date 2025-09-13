@@ -101,6 +101,8 @@ gluehead {
     border-radius: 0.2em;
     margin-right: 0.2em;
     box-sizing: border-box;
+    padding-top: -0.2em;
+    padding-bottom: -0.2em;
 }
 
 /* Specific border configurations */
