@@ -156,3 +156,29 @@ p:focus {
     outline-offset: 4px;
     border-radius: 4px;
 }
+
+/* Override paragraph styling when nested inside headings */
+h1 p,
+h2 p,
+h3 p,
+h4 p,
+h5 p,
+h6 p {
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: inherit !important;
+    font-weight: inherit !important;
+    color: inherit !important;
+    line-height: inherit !important;
+    text-align: inherit !important;
+    display: inline !important;
+}
+
+h1 p:hover,
+h2 p:hover,
+h3 p:hover,
+h4 p:hover,
+h5 p:hover,
+h6 p:hover {
+    color: inherit !important;
+}
