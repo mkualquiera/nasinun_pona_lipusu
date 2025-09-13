@@ -36,7 +36,7 @@ sona jansu palipala, sona jansu ala wilepa.
 palisu tenpolu pinipala, sona jansu palimo ansona kamapa.
 palisu ale tenpolo ni tanlu lonpa.
 
-<h3>wan tu lipusu.</h3>
+<h2>wan tu lipusu.</h2>
 
 suli jansu sinata ike suli sulipala, ante jansu anwawa kamapa.
 laso kiwensu sinata mute manipala, jansu ike jo pi kamapa.
