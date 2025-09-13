@@ -100,6 +100,7 @@ gluehead {
     border-color: currentColor;
     border-radius: 0.2em;
     margin-right: 0.2em;
+    box-sizing: border-box;
 }
 
 /* Specific border configurations */
