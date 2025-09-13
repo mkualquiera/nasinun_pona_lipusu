@@ -1,0 +1,68 @@
+name: Deploy transpiled content to Pages
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout current repo
+        uses: actions/checkout@v4
+        with:
+          path: content
+
+      - name: Checkout skp tool repo
+        uses: actions/checkout@v4
+        with:
+          repository: mkualquiera/suli-pona-toki
+          ref: me_lang
+          path: skp-repo
+
+      - name: Set up Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Cache Rust dependencies
+        uses: actions/cache@v3
+        with:
+          path: |
+            ~/.cargo/registry
+            ~/.cargo/git
+            skp-repo/sulikamapa/target
+          key: ${{ runner.os }}-cargo-${{ hashFiles('skp-repo/sulikamapa/Cargo.lock') }}
+
+      - name: Build skp tool
+        run: |
+          cd skp-repo/sulikamapa
+          cargo build --release
+
+      - name: Build HTML files
+        run: |
+          cd content
+          content=$(../skp-repo/sulikamapa/target/release/skp -i test.txt) && sed "s|{{content}}|$content|g" template.html > index.html
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'content'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
