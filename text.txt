@@ -61,7 +61,7 @@ nasinmo kinlu kipisi ala kenpa.
 misu nimo ala sonapa: nasinsu seme mamana sin kamapa.
 maun sewisu lili tenpolo lonpala, nasinsu ale tenpolo lonpa.
 
-<h2>wan tu tu lipusu.</h2>
+<h2>luka lipusu.</h2>
 
 nasinsu ale ijomo niwe pona panapa: nasinna alesu suli kenpa, pona kenpa. 
 pona ijosu nina suli kenpala, ike ijosu suli kinlu kenpa.
@@ -74,3 +74,10 @@ mute kepekenpala, mute sinpa.
 mute tokipala, lili sonapa.
 
 ni tanlu, osu lon konmo lukinpa.
+
+<h2>wan luka lipusu.</h2>
+
+nasinsu ansitelen mama pi nimipa.
+nasin insasu wekapala, nasinsu ale panapa, ale mamo lon kamapa.
+
+nasinsu sina insalo lonpala, sinasu nasinmo ale tenpolo kepekenpa.
