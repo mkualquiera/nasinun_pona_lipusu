@@ -54,7 +54,7 @@ object::after {
     content: "e";
 }
 
-preposition[role="direction"]::after {
+preposition[type="direction"]::after {
     content: "tawa";
 }
 
